@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!-- external css -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+
+    <title>CS-Coaching</title>
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-flex justify-content-between"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Faculties</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+          </ul>
+          <div>
+            <button
+              type="button"
+              class="btn btn-secondary blck_button"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              style="border-radius: 0.1rem"
+              title="View Brochure"
+            >
+              Brocure
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="border-radius: 0.1rem"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title="Contact to our team"
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- slider -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active slide__1">
+          <div style="padding-left: 2rem;padding-right: 2rem;display: flex;justify-content: center;">
+            <form style="text-align: start" class="slider__form">
+              <div class="d-flex">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="enter your name"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    placeholder="example@gmail.com"
+                  />
+                </div>
+              </div>
+
+              <div class="d-flex">
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    
+                    <input type="text" class="form-control" id="subject" placeholder="enter your subject"/>
+                </div>
+
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="number" class="form-control" id="phone" placeholder="Ex 9234516288"/>
+                </div>
+              </div>
+
+              <div class="d-flex">
+                <div class="mb-3 ml-3">
+                    <label for="alternate" class="form-label"
+                      >Alternate Phone Number</label
+                    >
+                    <input type="number" class="form-control" id="alternate" placeholder="Ex 8234516288"/>
+                  </div>
+                <div class="mb-3 ml-3">
+                    <label for="city" class="form-label"
+                      >City</label
+                    >
+                    <input type="text" class="form-control" id="alternate" placeholder="Ahmedabad"/>
+                  </div>
+              </div>
+
+              <button type="submit" style="border-radius: 0.1rem;" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- what we provide section start -->
+    <section class="whatWeOffer" style="margin-top: 1rem; margin-bottom: 1rem;">
+        <div class="whatWeOffer__header d-flex flex-column align-items-center justify-content-center containerr" style="width:90%;margin: auto;">
+            <h1 class="border-bottom border-primary border-3">What We Do</h1>
+            <div class="d-flex justify-content-between" style="width:100%;margin-top: 1rem;align-items: center;">
+                <div style="width: 50%;">
+                 <img src="./public/tests/s1.jpg" alt="about" style="width:100%;border-radius:0.5rem;height:20rem;border-top-right-radius: 0;border-bottom-right-radius: 0;"></div>
+                <div style="width: 50%;padding: 1rem;height:20rem;background: white;" class="shadow__inset">
+                    <h2>About Us</h2>
+                    <p style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur ducimus repudiandae delectus labore facilis error adipisci obcaecati quis quisquam numquam sunt nostrum, quod incidunt, consequuntur saepe expedita libero unde vel architecto illo ad, tempora molestiae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, soluta. Distinctio aut fugit tempore qui aliquid explicabo omnis similique laboriosam molestias nobis sint quibusdam unde, sunt non, vero accusamus temporibus adipisci minus iste sit reprehenderit.
+                        <br>
+                        <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quas ab delectus iste ea, magnam aperiam, nisi repudiandae non eligendi vitae dolorem veniam excepturi sunt vel, iure tempora laudantium officia consequuntur ullam corporis nihil. Nulla, sit corporis la
+                    </p>
+
+                    <a href="#" style="color:rgb(32, 74, 212)">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- what we provide section end -->
+
+    <!-- why choose us start -->
+    <section style="background: white;padding-top: 1rem;padding-bottom: 1rem;width: 100%;margin: auto;">
+      <div class="containerr">
+        <div style="display: flex;justify-content: center;">
+          <h1 class="border-bottom border-primary border-3">Why Choose Us</h1>
+        </div>
+        <p style="text-align: center;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, dolor totam. Necessitatibus a alias minus numquam repellendus quae culpa. Itaque beatae fugiat delectus eius nemo distinctio corporis obcaecati nobis, eaque suscipit amet assumenda eligendi.</p>
+
+        <!-- cards -->
+        <div class="d-flex justify-content-between">
+
+          <!-- card 1 -->
+          <div class="card box__magic__shadow_2" style="width: 18rem;">
+            <img src="./public/tests/s1.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <!-- card 1 end -->
+
+           <!-- card 2 -->
+           <div class="card box__magic__shadow_2" style="width: 18rem;">
+            <img src="./public/tests/s1.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <!-- card 2 end -->
+
+           <!-- card 3 -->
+           <div class="card box__magic__shadow_2" style="width: 18rem;">
+            <img src="./public/tests/s1.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <!-- card 3 end -->
+
+          <!-- card 4 -->
+          <div class="card box__magic__shadow_2" style="width: 18rem;">
+            <img src="./public/tests/s1.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <!-- card 4 end -->
+
+        </div>
+
+
+      </div>
+    </section>
+    <!-- why choose us end -->
+
+    <section class="brocure__container">
+      <img src="./public/tests/20544.jpg" class="brocure__container_imag" alt="...">
+
+      <main class="brocure__container__main">
+        <div class="card1" style="height: 100%;">
+          <div class="card-body d-flex justify-content-between" style="align-items: center;height:100%">
+            <div>
+              <h5 class="card-title" style="color:white">Need more information about us?</h5>
+            <p class="card-text" style="color:white">Obtain a Brochure</p>
+            </div>
+            <a href="#" class="btn btn-primary">Brocure</a>
+          </div>
+        </div>
+      </main>
+      
+    </section>
+
+    <section class="d-flex" style="align-items: center;">
+      <div style="width:36%;"><img src="./public/tests/demo_request.jpg" style="width:100%" alt=""></div>
+      <div class="d-flex justify-content-center" style="width:64%;height:100%;flex-direction: column;align-items: center;">
+        <h1>Book A Demo</h1>
+        <form style="text-align: start;height: 100%;" class="slider__form">
+          <div class="d-flex">
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="enter your name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                placeholder="example@gmail.com"
+              />
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                
+                <input type="text" class="form-control" id="subject" placeholder="enter your subject"/>
+            </div>
+
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="number" class="form-control" id="phone" placeholder="Ex 9234516288"/>
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div class="mb-3 ml-3">
+                <label for="alternate" class="form-label"
+                  >Alternate Phone Number</label
+                >
+                <input type="number" class="form-control" id="alternate" placeholder="Ex 8234516288"/>
+              </div>
+            <div class="mb-3 ml-3">
+                <label for="city" class="form-label"
+                  >City</label
+                >
+                <input type="text" class="form-control" id="alternate" placeholder="Ahmedabad"/>
+              </div>
+          </div>
+
+          <button type="submit" style="border-radius: 0.1rem;" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer start -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3671.882019668023!2d72.54930107450984!3d23.028103716123308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBus%20Stop%2C%20304%20to%20306%2C%20Aaryan%20Workspace%2C%202%2C%20Gulbai%20Tekra%20Rd%2C%20opp.%20Vasundhara%20Society%2C%20Navrangpura%2C%20Ahmedabad%2C%20Gujarat%20380009!5e0!3m2!1sen!2sin!4v1695234497973!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- footer end -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
